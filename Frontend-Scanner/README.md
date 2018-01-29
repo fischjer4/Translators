@@ -4,7 +4,7 @@ Throughout this course, we'll be working on building a compiler for a subset of 
 
 There are a few parts to this assignment, each outlined below.
 
-## 2. Implement a scanner for a simplified Python using flex
+## 1. Implement a scanner for a simplified Python using flex
 
 Flex is a tool that's widely-used for generating scanners.  To implement a scanner using flex, you must specify a set of regular expressions corresponding to patterns in your source language along with a set of actions to take when each of the patterns is matched.  We'll talk more about the details of flex in lecture.
 
@@ -77,7 +77,7 @@ In addition to recognizing the above, your scanner should have the following beh
   * Whole-line comments should be ignored.  A whole-line comment is one that does not occur on the same line as a statement and may optionally be indented.  In Python, a comment begins with a `#` character and continues to the end of the line.  Importantly, a comment line should not generate a `NEWLINE`.  For this assignment, you do not need to worry about comments that occur on the same line as a statement.
 
 
-## 3. Handle indentation
+## 2. Handle indentation
 
 In Python, indentation is used to group statements into blocks.  For example, all of the statements in an `if` block are indented one level further than the `if` statement itself, like below:
 ```python
@@ -123,7 +123,7 @@ DEDENT
 ```
 
 
-## 4. Implement a makefile to generate your scanner
+## 3. Implement a makefile to generate your scanner
 
 Finally, you should create a makefile to generate an executable scanner from your definition.  You should write your scanner definition in a flex file, e.g. `scanner.l`.  C++ library code containing a scanner generated from your definition can then be created like so:
 ```
