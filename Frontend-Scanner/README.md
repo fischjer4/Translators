@@ -1,23 +1,8 @@
 # Assignment 1
-**Due by 11:59pm on Monday, 1/29/2018**
-
-**Demo due by 11:59pm on Monday, 2/12/2018**
 
 Throughout this course, we'll be working on building a compiler for a subset of the language Python.  In this particular assignment, we'll implement the first phase of our compiler's front-end: the scanner.  We'll use a widely-used scanner generator called flex to do this.
 
 There are a few parts to this assignment, each outlined below.
-
-
-## 1. Sign up for Piazza
-
-Use this link to sign up for the CS 480 Piazza with your ONID email address: https://piazza.com/oregonstate/winter2018/cs480.
-
-We'll be using Piazza in this course for Q&A because it's geared towards students helping other students with the class.  Anyone can post or answer a question on Piazza, even anonymously, and the instructor and TAs can revise and endorse student answers, which means you can be confident in the quality of the response.
-
-You are *strongly encouraged* to post any class-related questions to Piazza first instead of emailing the instructor or TAs.  You should also get in the habit of checking in to Piazza to answer other students' questions.  This will not only enable everyone to get help quickly, but it will also help you improve your understanding of the material, since teaching someone else is the best way to learn something.
-
-As an incentive to use Piazza, extra credit will be awarded to the most active Piazza participants at the end of the class.
-
 
 ## 2. Implement a scanner for a simplified Python using flex
 
@@ -180,21 +165,3 @@ Here is some guidance on how to implement your scanner:
     ```
     %option noyywrap
     ```
-
-## Submission
-
-We'll be using GitHub Classroom for this assignment, and you will submit your assignment via GitHub.  Make sure your completed files are committed and pushed by the assignment's deadline to the master branch of the GitHub repo that was created for you by GitHub Classroom.  A good way to check whether your files are safely submitted is to look at the master branch your assignment repo on the github.com website (i.e. https://github.com/OSU-CS480-W18/assignment-1-YourGitHubUsername/). If your changes show up there, you can consider your files submitted.
-
-## Grading criteria
-
-The TAs will grade your assignment by compiling and running it on one of the ENGR servers, e.g. `flip.engr.oregonstate.edu`, so you should make sure your code works as expected there.  `flex` is installed on the ENGR servers.  If your code does not compile and run on the ENGR servers, the TAs will deduct at least 25 points from your score.
-
-This assignment is worth 100 points total, broken down as follows:
-
-  * 20 points: signed up for Piazza
-
-  * 80 points: implemented simplified Python scanner:
-    * 50 points: scanner correctly recognizes basic syntactic categories (e.g. identifiers, numbers, keywords, operators, newlines, etc.) and generates the appropriate output for these, as described above
-    * 5 points: scanner correctly ignores whitespace, blank lines, and whole-line comments
-    * 20 points: scanner correctly tracks indentation and emits `INDENT` and `DEDENT` tokens when appropriate
-    * 5 points: your submission includes a makefile that generates an executable scanner from your scanner definition
