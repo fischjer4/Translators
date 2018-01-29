@@ -47,15 +47,15 @@
 
 [ \t]*										/*space in thte middle of expression, ignore*/
 
-\n											{cout << "NEWLINE" << endl;}
+\n								{cout << "NEWLINE" << endl;}
 
-True|False									{printElement("BOOLEAN", (yytext[0] == 'T' ? "1" : "0"), "\t\t"); }
+True|False						{printElement("BOOLEAN", (yytext[0] == 'T' ? "1" : "0"), "\t\t"); }
 
-and											{printElement("AND", yytext, "\t\t");}
+and								{printElement("AND", yytext, "\t\t");}
 
-break 										{printElement("BREAK", yytext, "\t\t");}
+break 							{printElement("BREAK", yytext, "\t\t");}
 
-def 										{printElement("DEF", yytext, "\t\t");}
+def 							{printElement("DEF", yytext, "\t\t");}
 
 elif 										{printElement("ELIF", yytext, "\t\t");}
 
