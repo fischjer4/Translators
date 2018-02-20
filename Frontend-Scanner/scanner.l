@@ -62,9 +62,9 @@ def 						{printElement("DEF", yytext, "\t\t");}
 
 elif 						{printElement("ELIF", yytext, "\t\t");}
 
-else 						{printElement("ELSE", yytext, "\t\t");}
+else						{printElement("ELSE", yytext, "\t\t");}
 
-for 						{printElement("FOR", yytext, "\t\t");}
+for							{printElement("FOR", yytext, "\t\t");}
 
 if 							{printElement("IF", yytext, "\t\t");}
 
