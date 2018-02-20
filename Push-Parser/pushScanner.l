@@ -223,6 +223,11 @@ while 						{
 								PUSH_TOKEN(COLON);	
 							}
 
+.							{
+								std::cerr << "Invalid symbol on line " << yylineno << ": " << yytext << std::endl;
+								PUSH_TOKEN(yytext[0]);
+							}
+
 <<EOF>> 					{
 								checkIndentation(stack, yyleng);
 								int s = yypush_parse(pstate, 0, NULL, NULL);

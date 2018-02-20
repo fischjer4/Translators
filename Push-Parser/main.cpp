@@ -18,7 +18,7 @@ extern string entireProg;
 extern map<string, string> symbols;
 extern vector<string*> dels;
 
-void delMap(){
+void delVec(){
     vector<string*>::iterator vecIT;
     for (vecIT = dels.begin(); vecIT != dels.end(); vecIT++) {
         if(*vecIT != NULL){
@@ -47,9 +47,9 @@ int main(int argc, char const *argv[]) {
         result.append("return 0;\n}");
         
         cout << result; 
-        delMap();      
+        delVec();      
         return 0;
     } 
-    delMap();          
+    delVec();          
     return 1;
 }  
