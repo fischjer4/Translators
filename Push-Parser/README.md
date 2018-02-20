@@ -1,7 +1,4 @@
 # Assignment 2
-**Due by 11:59pm on Monday, 2/19/2018**
-
-**Demo due by 11:59pm on Monday, 3/5/2018**
 
 In this assignment we'll work on a parser for a small subset of the language Python.  In particular, we'll use the widely-used parser generator Bison to implement a parser that, when combined with the scanner we wrote in assignment 1, will perform syntax-directed translation from Python to C/C++.
 
