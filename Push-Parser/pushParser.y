@@ -248,7 +248,18 @@
 														delete $11;
 														delete $13;
 													}
-					 
+					 |  IF expression COLON NEWLINE
+					 	 INDENT program  DEDENT 
+					   elifStmt 					{
+														string *toPrint = new string("if(" + *$2 + "){\n" + *$6 + "}\n" + *$8); 
+														dels.push_back(toPrint); 
+														$$ = toPrint;
+														delete $1;
+														delete $3;
+														delete $4;
+														delete $5;
+														delete $7;
+													}
 					 |  IF expression COLON NEWLINE
 					 	 INDENT program  DEDENT 
 					   elifStmt 
